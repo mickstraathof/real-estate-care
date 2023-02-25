@@ -1,7 +1,8 @@
 <template>
   <v-toolbar>
     <v-toolbar-items>
-      <v-btn>Dashboard</v-btn>
+      <v-btn><font-awesome-icon icon="fa-solid fa-house" /></v-btn>
+      <v-btn><font-awesome-icon icon="fa-solid fa-gears" /></v-btn>
     </v-toolbar-items>
   </v-toolbar>
 </template>

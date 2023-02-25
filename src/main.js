@@ -12,4 +12,20 @@ const vuetify = createVuetify({
     directives,
 })
 
-createApp(App).use(vuetify).mount('#app')
+/* import the fontawesome core */
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+/* import specific icons */
+import {
+    faUserSecret,
+    faHome,
+    faGears
+} from '@fortawesome/free-solid-svg-icons'
+
+/* add icons to the library */
+library.add(faUserSecret, faHome, faGears)
+
+createApp(App).component('font-awesome-icon', FontAwesomeIcon).use(vuetify).mount('#app')
