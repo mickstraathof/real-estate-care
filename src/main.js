@@ -22,10 +22,14 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
     faUserSecret,
     faHome,
-    faGears
+    faGears,
+    faInfinity,
+    faInbox,
+    faInfo,
+    faFileCircleCheck
 } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faUserSecret, faHome, faGears)
+library.add(faUserSecret, faHome, faGears, faInbox, faInfo, faInfinity, faFileCircleCheck)
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).use(vuetify).mount('#app')
