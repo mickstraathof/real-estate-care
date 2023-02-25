@@ -1,7 +1,6 @@
 <template>
-<!--  <HelloWorld />-->
   <Header />
-    <p><!-- temp filling --></p>
+    <Dashboard />
   <Footer />
 </template>
 
@@ -9,13 +8,15 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Dashboard from "@/components/Dashboard";
 
 export default {
   name: 'App',
   components: {
     // HelloWorld
     Header,
-    Footer
+    Footer,
+    Dashboard
   }
 }
 </script>
@@ -31,5 +32,9 @@ export default {
   margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+header{
+  z-index: 1;
 }
 </style>
