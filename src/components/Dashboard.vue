@@ -4,6 +4,53 @@
 
     </div>
 
+    <main>
+      <v-container>
+        <v-row dense>
+          <v-col cols="12">
+            <v-card>
+              <v-card-title><font-awesome-icon icon="fa-solid fa-inbox" /> Toegewezen Rapportages</v-card-title>
+              <v-card-text>Bekijk hier de rapportages die aan u zijn toegewezen</v-card-text>
+              <v-card-actions>
+                <v-btn>Ga</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+
+          <v-col cols="12">
+            <v-card>
+              <v-card-title><font-awesome-icon icon="fa-solid fa-file-circle-check" /> Uitgevoerde Rapportages</v-card-title>
+              <v-card-text>Bekijk hier de rapportages die reeds zijn uitgevoerd</v-card-text>
+              <v-card-actions>
+                <v-btn>Ga</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+
+          <v-col cols="12">
+            <v-card>
+              <v-card-title><font-awesome-icon icon="fa-solid fa-info" /> Kennisbank</v-card-title>
+              <v-card-text>Vind hier alle belangrijke documenten en procedures terug </v-card-text>
+              <v-card-actions>
+                <v-btn>Ga</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+
+          <v-col cols="12">
+            <v-card>
+              <v-card-title><font-awesome-icon icon="fa-solid fa-gears" /> Instellingen</v-card-title>
+              <v-card-text>Pas hier uw instellingen aan</v-card-text>
+              <v-card-actions>
+                <v-btn>Ga</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+
+        </v-row>
+      </v-container>
+    </main>
+
     <div class="right-bubble">
       <div class="inner-bubble">
 
@@ -55,5 +102,10 @@
     width: 80%;
     border-bottom-left-radius: 100% 100%;
     background-color: rgb(20, 27, 31);
+  }
+
+  main{
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
 </style>
