@@ -1,0 +1,193 @@
+{
+    "reports": [
+        {
+            "id": 1,
+            "adress" : "Dorpsstraat",
+            "houseNumber" : 123,
+            "city" : "Amsterdam",
+            "zipCode" : "1234AB",
+            "damage" : {
+                "location" : "keuken",
+                "newDamage" : false,
+                "damageType" : "slijtage",
+                "date" : "2023-02-22",
+                "directAction" : false,
+                "description" : "keukenla sluit niet goed meer"
+            },
+            "deferredMaintenance" : {
+                "location" : "badkamer",
+                "maintenanceType" : "schilderwerk",
+                "directAction" : false,
+                "costs" : "0-500"
+            },
+            "technicalInstallations" : {
+                "location" : "woonkamer",
+                "installationType" : "verwarming",
+                "reportedFailures" : "geen",
+                "testProcedure" : "/assets/testProcedures/verwarming.pdf",
+                "approved" : true,
+                "comments" : "geen"
+            },
+            "modifications" : {
+                "documentedModifications" : "/assets/modifications/1",
+                "location" : "keuken",
+                "performedBy" : "bewoner",
+                "modification" : "rookmelder",
+                "action" : "accepteren",
+                "comments" : "geen"
+            }
+        },
+
+        {
+            "id": 1,
+            "adress" : "Dorpsstraat",
+            "houseNumber" : 123,
+            "city" : "Amsterdam",
+            "zipCode" : "1234AB",
+            "damage" : {
+                "location" : "keuken",
+                "newDamage" : false,
+                "damageType" : "slijtage",
+                "date" : "2023-02-22",
+                "directAction" : false,
+                "description" : "keukenla sluit niet goed meer"
+            },
+            "deferredMaintenance" : {
+                "location" : "badkamer",
+                "maintenanceType" : "schilderwerk",
+                "directAction" : false,
+                "costs" : "0-500"
+            },
+            "technicalInstallations" : {
+                "location" : "woonkamer",
+                "installationType" : "verwarming",
+                "reportedFailures" : "geen",
+                "testProcedure" : "/assets/testProcedures/verwarming.pdf",
+                "approved" : true,
+                "comments" : "geen"
+            },
+            "modifications" : {
+                "documentedModifications" : "/assets/modifications/1",
+                "location" : "keuken",
+                "performedBy" : "bewoner",
+                "modification" : "rookmelder",
+                "action" : "accepteren",
+                "comments" : "geen"
+            }
+        },
+
+        {
+            "id": 1,
+            "adress" : "Dorpsstraat",
+            "houseNumber" : 123,
+            "city" : "Amsterdam",
+            "zipCode" : "1234AB",
+            "damage" : {
+                "location" : "keuken",
+                "newDamage" : false,
+                "damageType" : "slijtage",
+                "date" : "2023-02-22",
+                "directAction" : false,
+                "description" : "keukenla sluit niet goed meer"
+            },
+            "deferredMaintenance" : {
+                "location" : "badkamer",
+                "maintenanceType" : "schilderwerk",
+                "directAction" : false,
+                "costs" : "0-500"
+            },
+            "technicalInstallations" : {
+                "location" : "woonkamer",
+                "installationType" : "verwarming",
+                "reportedFailures" : "geen",
+                "testProcedure" : "/assets/testProcedures/verwarming.pdf",
+                "approved" : true,
+                "comments" : "geen"
+            },
+            "modifications" : {
+                "documentedModifications" : "/assets/modifications/1",
+                "location" : "keuken",
+                "performedBy" : "bewoner",
+                "modification" : "rookmelder",
+                "action" : "accepteren",
+                "comments" : "geen"
+            }
+        },
+
+        {
+            "id": 1,
+            "adress" : "Dorpsstraat",
+            "houseNumber" : 123,
+            "city" : "Amsterdam",
+            "zipCode" : "1234AB",
+            "damage" : {
+                "location" : "keuken",
+                "newDamage" : false,
+                "damageType" : "slijtage",
+                "date" : "2023-02-22",
+                "directAction" : false,
+                "description" : "keukenla sluit niet goed meer"
+            },
+            "deferredMaintenance" : {
+                "location" : "badkamer",
+                "maintenanceType" : "schilderwerk",
+                "directAction" : false,
+                "costs" : "0-500"
+            },
+            "technicalInstallations" : {
+                "location" : "woonkamer",
+                "installationType" : "verwarming",
+                "reportedFailures" : "geen",
+                "testProcedure" : "/assets/testProcedures/verwarming.pdf",
+                "approved" : true,
+                "comments" : "geen"
+            },
+            "modifications" : {
+                "documentedModifications" : "/assets/modifications/1",
+                "location" : "keuken",
+                "performedBy" : "bewoner",
+                "modification" : "rookmelder",
+                "action" : "accepteren",
+                "comments" : "geen"
+            }
+        },
+
+        {
+            "id": 1,
+            "adress" : "Dorpsstraat",
+            "houseNumber" : 123,
+            "city" : "Amsterdam",
+            "zipCode" : "1234AB",
+            "damage" : {
+                "location" : "keuken",
+                "newDamage" : false,
+                "damageType" : "slijtage",
+                "date" : "2023-02-22",
+                "directAction" : false,
+                "description" : "keukenla sluit niet goed meer"
+            },
+            "deferredMaintenance" : {
+                "location" : "badkamer",
+                "maintenanceType" : "schilderwerk",
+                "directAction" : false,
+                "costs" : "0-500"
+            },
+            "technicalInstallations" : {
+                "location" : "woonkamer",
+                "installationType" : "verwarming",
+                "reportedFailures" : "geen",
+                "testProcedure" : "/assets/testProcedures/verwarming.pdf",
+                "approved" : true,
+                "comments" : "geen"
+            },
+            "modifications" : {
+                "documentedModifications" : "/assets/modifications/1",
+                "location" : "keuken",
+                "performedBy" : "bewoner",
+                "modification" : "rookmelder",
+                "action" : "accepteren",
+                "comments" : "geen"
+            }
+        }
+    ]
+}
