@@ -22,7 +22,8 @@
               <v-card-title><font-awesome-icon icon="fa-solid fa-file-circle-check" /> Uitgevoerde Rapportages</v-card-title>
               <v-card-text>Bekijk hier de rapportages die reeds zijn uitgevoerd</v-card-text>
               <v-card-actions>
-                <v-btn>Ga</v-btn>
+                <v-btn>Inzien</v-btn>
+                <v-btn>Aanpassen</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
@@ -66,6 +67,7 @@ import ReportService from "@/services/ReportService";
   export default {
     name: 'Dashboard-component',
     created(){
+      //Haar de reports op uit de ReportService
       ReportService.getPage('/reports')
           .then(response => {
             this.reports = response.data;
