@@ -61,8 +61,19 @@
 
 
 <script>
+import ReportService from "@/services/ReportService";
+
   export default {
-    name: 'Dashboard-component'
+    name: 'Dashboard-component',
+    created(){
+      ReportService.getPage('/reports')
+          .then(response => {
+            this.reports = response.data;
+            console.log(this.reports)
+          }).catch(error => {
+            console.log(error)
+      })
+    }
   }
 </script>
 
