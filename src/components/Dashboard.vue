@@ -20,7 +20,22 @@
           <v-col cols="12">
             <v-card>
               <v-card-title><font-awesome-icon icon="fa-solid fa-file-circle-check" /> Uitgevoerde Rapportages</v-card-title>
-              <v-card-text>Bekijk hier de rapportages die reeds zijn uitgevoerd</v-card-text>
+              <v-card-text>
+                Bekijk hier de rapportages die reeds zijn uitgevoerd<br />
+                <v-divider></v-divider>
+                <ul>
+                  <li v-for="report in reports" :report="report" :key="report.id">
+                    <span class="report-title">
+                      {{ report.adress + ' ' + report.houseNumber + ', ' + report.city + ' - ' + report.date}}
+                      <v-chip v-if="report.damage.directAction || report.deferredMaintenance.directAction" class="ma-2" color="red" text-color="white">
+                        Vereist acute actie!
+                      </v-chip>
+                    </span>
+                    {{  }}
+                    <v-divider></v-divider>
+                  </li>
+                </ul>
+              </v-card-text>
               <v-card-actions>
                 <v-btn>Inzien</v-btn>
                 <v-btn>Aanpassen</v-btn>
@@ -66,16 +81,30 @@ import ReportService from "@/services/ReportService";
 
   export default {
     name: 'Dashboard-component',
+    data(){
+      return{
+        reports: null
+      }
+    },
     created(){
       //Haar de reports op uit de ReportService
       ReportService.getPage('/reports')
           .then(response => {
             this.reports = response.data;
-            console.log(this.reports)
+            //sorteer alle reports op datum
+            this.reports.sort((a, b) => {
+              if(a. date < b.date){
+                return -1;
+              }
+              if(a.date > b.date){
+                return 1;
+              }
+              return 0;
+            })
           }).catch(error => {
             console.log(error)
       })
-    }
+    },
   }
 </script>
 
@@ -120,5 +149,18 @@ import ReportService from "@/services/ReportService";
   main{
     margin-top: 10%;
     margin-bottom: 10%;
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  ul li{
+    padding-top: 2em;
+  }
+
+  .report-title{
+    font-size: 1.2em;
+    margin-bottom: .3em;
   }
 </style>
