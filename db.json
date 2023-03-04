@@ -121,7 +121,7 @@
             "houseNumber" : 123,
             "city" : "Amsterdam",
             "zipCode" : "1234AB",
-            "date" : "2023-02-22",
+            "date" : "2023-02-25",
             "damage" : {
                 "location" : "keuken",
                 "newDamage" : false,
@@ -159,7 +159,7 @@
             "houseNumber" : 123,
             "city" : "Amsterdam",
             "zipCode" : "1234AB",
-            "date" : "2023-02-22",
+            "date" : "2023-03-01",
             "damage" : {
                 "location" : "keuken",
                 "newDamage" : false,
