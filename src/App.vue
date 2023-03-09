@@ -1,6 +1,6 @@
 <template>
   <Header />
-    <Dashboard />
+    <router-view />
   <Footer />
 </template>
 
@@ -8,7 +8,6 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Dashboard from "@/components/Dashboard";
 
 export default {
   name: 'App',
@@ -16,7 +15,6 @@ export default {
     // HelloWorld
     Header,
     Footer,
-    Dashboard
   }
 }
 </script>
