@@ -28,11 +28,17 @@ export default {
 #app{
   min-height: 100vh;
   margin: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
 }
 
-header{
+header:first-of-type{
   z-index: 1;
+  position: fixed;
+  top: 0;
+}
+
+header:nth-of-type(2){
+  position: fixed;
+  bottom: 0;
 }
 </style>
+

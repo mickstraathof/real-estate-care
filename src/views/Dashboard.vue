@@ -1,8 +1,7 @@
 <template>
   <div class="content">
-    <div class="left-bubble">
 
-    </div>
+    <RightBubble />
 
     <main>
       <v-container>
@@ -67,45 +66,47 @@
       </v-container>
     </main>
 
-    <div class="right-bubble">
-      <div class="inner-bubble">
-
-      </div>
-    </div>
+    <LeftBubble />
   </div>
 </template>
 
 
 <script>
+import RightBubble from "@/components/RightBubble.vue";
 import ReportService from "@/services/ReportService";
+import LeftBubble from "@/components/LeftBubble.vue";
 
   export default {
-    name: 'Dashboard-component',
-    data(){
-      return{
-        reports: null
-      }
+    name: "Dashboard-component",
+    components: {
+      RightBubble,
+      LeftBubble,
     },
-    created(){
-      //Haar de reports op uit de ReportService
-      ReportService.getPage('/reports')
-          .then(response => {
+    data() {
+        return {
+            reports: null
+        };
+    },
+    created() {
+        //Haar de reports op uit de ReportService
+        ReportService.getPage("/reports")
+            .then(response => {
             this.reports = response.data;
             //sorteer alle reports op datum
             this.reports.sort((a, b) => {
-              if(a. date < b.date){
-                return -1;
-              }
-              if(a.date > b.date){
-                return 1;
-              }
-              return 0;
-            })
-          }).catch(error => {
-            console.log(error)
-      })
+                if (a.date < b.date) {
+                    return -1;
+                }
+                if (a.date > b.date) {
+                    return 1;
+                }
+                return 0;
+            });
+        }).catch(error => {
+            console.log(error);
+        });
     },
-  }
+}
 </script>
 
 
@@ -113,37 +114,9 @@ import ReportService from "@/services/ReportService";
   .content{
     width: 100%;
     height: 100%;
-    position: relative;
-  }
-
-  .left-bubble{
-    position: absolute;
-    bottom: -5%;
-    left: 0;
-    height: 10%;
-    width: 50%;
-    background-color: rgb(0, 180, 162);
-    border-top-right-radius: 100% 100%;
-  }
-
-  .right-bubble{
-    position: absolute;
-    top: -5%;
-    right: 0;
-    height: 12%;
-    width: 60%;
-    border-bottom-left-radius: 100% 100%;
-    background-color: rgb(0, 180, 162);
-  }
-
-  .inner-bubble{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 80%;
-    width: 80%;
-    border-bottom-left-radius: 100% 100%;
-    background-color: rgb(20, 27, 31);
+    padding-top: 4em;
+    padding-bottom: 4em;
+    z-index: 1;
   }
 
   main{
