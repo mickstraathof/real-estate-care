@@ -34,6 +34,7 @@ header:first-of-type{
   z-index: 1;
   position: fixed;
   top: 0;
+  z-index: 3;
 }
 
 header:nth-of-type(2){

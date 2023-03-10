@@ -23,6 +23,7 @@
     width: 60%;
     border-bottom-left-radius: 100% 100%;
     background-color: rgb(0, 180, 162);
+    z-index: 2;
   }
 
   .inner-bubble{
