@@ -3,6 +3,7 @@ import {createRouter, createWebHistory} from "vue-router";
 //import components
 import Dashboard from "../views/Dashboard";
 import AssignedReports from "../views/AssignedReports";
+import CompletedReports from "../views/CompletedReports";
 
 const routes = [
     //declaring routes
@@ -15,6 +16,11 @@ const routes = [
         path: '/assigned-reports',
         name: 'assigned-reports',
         component: AssignedReports,
+    },
+    {
+        path: '/completed-reports',
+        name: 'completed-reports',
+        component: CompletedReports,
     }
 ]
 
