@@ -11,7 +11,9 @@
               <v-card-title><font-awesome-icon icon="fa-solid fa-inbox" /> Toegewezen Rapportages</v-card-title>
               <v-card-text>Bekijk hier de rapportages die aan u zijn toegewezen</v-card-text>
               <v-card-actions>
-                <v-btn>Ga</v-btn>
+                <router-link to="/assigned-reports">
+                  <v-btn>Ga</v-btn>
+                </router-link>
               </v-card-actions>
             </v-card>
           </v-col>
@@ -36,8 +38,10 @@
                 </ul>
               </v-card-text>
               <v-card-actions>
-                <v-btn>Inzien</v-btn>
-                <v-btn>Aanpassen</v-btn>
+                <router-link to="/completed-reports">
+                  <v-btn>Inzien</v-btn>
+                  <v-btn>Aanpassen</v-btn>
+                </router-link>
               </v-card-actions>
             </v-card>
           </v-col>
