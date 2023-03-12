@@ -11,7 +11,7 @@
                             Vereist acute actie!
                         </v-chip>
                         <v-card-actions>
-                            <v-btn variant="outlined">Bekijk Rapportage</v-btn>
+                            <v-btn @click="showReport(report)" variant="outlined">Bekijk Rapportage</v-btn>
                         </v-card-actions>
                     </v-card>
                 </v-col>
@@ -60,6 +60,17 @@ import ReportService from '@/services/ReportService';
             console.log(error);
         });
     },
+    methods:{
+        showReport(report){
+            console.log('navigeren naar: ' + report.id )
+            this.$router.push({
+                name: 'completed-report',
+                params:{
+                    id: report.id,
+                }
+            });
+        }
+    }
 }
 </script>
 
@@ -78,4 +89,7 @@ button{
     color: rgb(0, 180, 162);
 }
     
+a{
+    text-decoration: none;
+}
 </style>
