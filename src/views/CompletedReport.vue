@@ -26,11 +26,11 @@
                                             color="info"
                                             v-model="currentReport.damage.newDamage"
                                         ></v-switch>
-                                            
-                                        <v-text-field
-                                            v-model="currentReport.damage.damageType"
+                                        <v-select
                                             label="Soort schade"
-                                        ></v-text-field>
+                                            :items="['Moedwillig', 'Slijtage', 'Geweld', 'Normaal gebruik', 'Calamiteit', 'Anders']"
+                                            v-model="currentReport.damage.damageType"
+                                        ></v-select>
                                         <v-switch
                                             label="Directe actie?"
                                             color="info"
@@ -54,6 +54,89 @@
                                         <v-text-field
                                             v-model="currentReport.deferredMaintenance.location"
                                             label="Locatie"
+                                        ></v-text-field>
+                                        <v-select
+                                            label="Soort onderhoud"
+                                            :items="['Schilderwerk', 'Houtrot', 'Elektra', 'Leidingwerk', 'Beglazing']"
+                                            v-model="currentReport.deferredMaintenance.maintenanceType"
+                                        ></v-select>
+                                        <v-switch
+                                            label="Directe actie?"
+                                            color="info"
+                                            v-model="currentReport.deferredMaintenance.directAction"    
+                                        ></v-switch>
+                                        <v-alert
+                                            class="mb-6"
+                                            v-if="currentReport.deferredMaintenance.directAction"
+                                            color="warning"
+                                            title="Directe actie!"
+                                            text="Voor dit type onderhoud moet direct actie ondernomen worden. Op de kennisbank kunt u het juiste protocol terugvinden"
+                                        ></v-alert>
+                                        <v-select
+                                            label="Kostenindicatie"
+                                            :items="['€0-500', '€500-1500', '€1500+']"
+                                            v-model="currentReport.deferredMaintenance.costs"
+                                        ></v-select>
+                                        <v-divider></v-divider>
+                                        <h3>Technische Installaties</h3>
+                                        <v-text-field
+                                            v-model="currentReport.technicalInstallations.location"
+                                            label="Locatie"
+                                        ></v-text-field>
+                                        <v-select
+                                            label="Soort installatie"
+                                            :items="['Koeling', 'Verwarming', 'Luchtverversing', 'Elektra', 'Beveiliging']"
+                                            v-model="currentReport.technicalInstallations.installationType"
+                                        ></v-select>
+                                        <v-text-field
+                                            label="Gemelde storingen"
+                                            v-model="currentReport.technicalInstallations.reportedFailures"
+                                        ></v-text-field>
+                                        <v-btn>
+                                            Testprocedure (PDF)
+                                        </v-btn>
+                                        <v-switch
+                                            label="Goedgekeurd"
+                                            color="info"
+                                            v-model="currentReport.technicalInstallations.approved"
+                                        ></v-switch>
+                                        <v-alert
+                                            class="mb-6"
+                                            v-if="currentReport.technicalInstallations.approved"
+                                            color="success"
+                                            title="Goedgekeurd!"
+                                            text="De technische installatie is goedgekeurd aan de hand van de uitgevoerde testprocedure"
+                                        ></v-alert>
+                                        <v-text-field
+                                            label="Opmerkingen"
+                                            v-model="currentReport.technicalInstallations.comments"
+                                        ></v-text-field>
+                                        <v-divider></v-divider>
+                                        <h3>Modificaties</h3>
+                                        <v-btn>
+                                            Bestaande situatie (PDF)
+                                        </v-btn>
+                                        <v-text-field
+                                            label="locatie"
+                                            v-model="currentReport.modifications.location"
+                                        ></v-text-field>
+                                        <v-select
+                                            label="Uitgevoerd door"
+                                            :items="['Huurder', 'Aannemer', 'Onbekend']"
+                                            v-model="currentReport.modifications.performedBy"
+                                        ></v-select>
+                                        <v-text-field
+                                            label="Beschrijving modificatie"
+                                            v-model="currentReport.modifications.modification"
+                                        ></v-text-field>
+                                        <v-select
+                                            label="Te ondernemen actie"
+                                            :items="['Accepteren', 'Laten keuren', 'Laten verwijderen', 'Laten aanpassen en keuren']"
+                                            v-model="currentReport.modifications.action"
+                                        ></v-select>
+                                        <v-text-field
+                                            label="Opmerkingen"
+                                            v-model="currentReport.modifications.comments"
                                         ></v-text-field>
                                     </v-form>
                             </v-sheet>
