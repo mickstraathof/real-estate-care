@@ -1,6 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
+//import store
+import store from './store'
+
 //import router
 import router from "@/router";
 
@@ -35,4 +38,4 @@ import {
 /* add icons to the library */
 library.add(faUserSecret, faHome, faGears, faInbox, faInfo, faInfinity, faFileCircleCheck)
 
-createApp(App).component('font-awesome-icon', FontAwesomeIcon).use(vuetify).use(router).mount('#app')
+createApp(App).component('font-awesome-icon', FontAwesomeIcon).use(vuetify).use(router).use(store).mount('#app')
