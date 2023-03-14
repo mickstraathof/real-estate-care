@@ -11,6 +11,7 @@ export default createStore({
                 "zipCode" : "2518JA",
                 "date" : null,
                 "damage" : {
+                    "applies": false,
                     "location" : null,
                     "newDamage" : null,
                     "damageType" : null,
@@ -18,12 +19,14 @@ export default createStore({
                     "description" : null
                 },
                 "deferredMaintenance" : {
+                    "applies": false,
                     "location" : null,
                     "maintenanceType" : null,
                     "directAction" : null,
                     "costs" : null
                 },
                 "technicalInstallations" : {
+                    "applies": false,
                     "location" : null,
                     "installationType" : null,
                     "reportedFailures" : null,
@@ -32,6 +35,7 @@ export default createStore({
                     "comments" : null
                 },
                 "modifications" : {
+                    "applies": false,
                     "documentedModifications" : null,
                     "location" : null,
                     "performedBy" : null,

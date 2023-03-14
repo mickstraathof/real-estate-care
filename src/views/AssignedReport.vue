@@ -15,8 +15,13 @@
                             Inspectie uitgevoerd op {{ currentReport.date }}
                             <v-divider></v-divider>
                             <h3>Schade</h3>
+                            <v-switch
+                                label="Is van toepassing"
+                                v-model="currentReport.damage.applies"
+                                color="info"
+                            ></v-switch>
                                 <v-sheet width="300" class="mx-auto">
-                                    <v-form fast-fail @submit.prevent v-if="currentReport.damage">
+                                    <v-form fast-fail @submit.prevent v-if="currentReport.damage && currentReport.damage.applies">
                                         <v-text-field
                                             v-model="currentReport.damage.location"
                                             label="Locatie"
@@ -50,7 +55,12 @@
                                     </v-form>
                                     <v-divider></v-divider>
                                     <h3>Achterstallig onderhoud</h3>
-                                    <v-form fast-fail @submit.prevent v-if="currentReport.deferredMaintenance">
+                                    <v-switch 
+                                        label="Is van toepassing"
+                                        color="info"
+                                        v-model="currentReport.deferredMaintenance.applies"
+                                    ></v-switch>
+                                    <v-form fast-fail @submit.prevent v-if="currentReport.deferredMaintenance && currentReport.deferredMaintenance.applies">
                                         <v-text-field
                                             v-model="currentReport.deferredMaintenance.location"
                                             label="Locatie"
@@ -77,8 +87,15 @@
                                             :items="['€0-500', '€500-1500', '€1500+']"
                                             v-model="currentReport.deferredMaintenance.costs"
                                         ></v-select>
-                                        <v-divider></v-divider>
-                                        <h3>Technische Installaties</h3>
+                                    </v-form>
+                                    <v-divider></v-divider>
+                                    <h3>Technische Installaties</h3>
+                                    <v-switch
+                                        label="Is van toepassing"
+                                        color="info"
+                                        v-model="currentReport.technicalInstallations.applies"
+                                    ></v-switch>
+                                    <v-form fast-fail @submit.prevent v-if="currentReport.deferredMaintenance && currentReport.technicalInstallations.applies">
                                         <v-text-field
                                             v-model="currentReport.technicalInstallations.location"
                                             label="Locatie"
@@ -111,9 +128,16 @@
                                             label="Opmerkingen"
                                             v-model="currentReport.technicalInstallations.comments"
                                         ></v-text-field>
-                                        <v-divider></v-divider>
-                                        <h3>Modificaties</h3>
-                                        <v-btn>
+                                    </v-form>
+                                    <v-divider></v-divider>
+                                    <h3>Modificaties</h3>
+                                    <v-switch
+                                        label="Is van toepassing"
+                                        color="info"
+                                        v-model="currentReport.modifications.applies"
+                                    ></v-switch>
+                                    <v-form fast-fail @submit.prevent v-if="currentReport.deferredMaintenance && currentReport.modifications.applies">
+                                        <v-btn class="mb-6">
                                             Bestaande situatie (PDF)
                                         </v-btn>
                                         <v-text-field
@@ -151,42 +175,25 @@
 
 
 <script>
-    //import services
-    import ReportService from '@/services/ReportService';
-
     //import components
-    import LeftBubble from '@/components/LeftBubble.vue';
     import RightBubble from '@/components/RightBubble.vue';
+    import LeftBubble from '@/components/LeftBubble.vue';
+
     export default{
         components: {
-            LeftBubble,
             RightBubble,
+            LeftBubble,
         },
         created(){
             //get report with corresponding id from the url
-            ReportService.getPage('/reports').then(res => {
-                const data = res.data;
-                const id = this.$route.params.id;
-                const report = data.filter((obj)=>{
+            const data = this.$store.state.assignedReports;
+            const id = this.$route.params.id;
+            const report = data.filter((obj)=>{
                     return obj.id === parseInt(id);
-                }).pop();
-                //assign the selected report to the report variable
-                this.currentReport = report;
-            }).catch(error => {
-                console.log(error);
-            }); 
+            }).pop();
+            //assign the selected report to the report variable
+            this.currentReport = report;
         },
-        data(){
-            return{
-                currentReport: "null",
-            }
-        },
-        methods:{
-            getLocation(){
-                return JSON.stringify(this.currentReport.damage.location);
-            }
-            
-        }
     }
 </script>
 
@@ -195,18 +202,9 @@
     .content{
     width: 100%;
     height: 100%;
-    padding-top: 5em;
+    padding-top: 6em;
     padding-bottom: 4em;
     z-index: 1;
-    }
-
-    .v-card-title{
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-    .smalltext{
-        font-size: 14px;
     }
 
     h3{

@@ -7,7 +7,7 @@
                     <v-card>
                         <v-card-title>{{ report.adress + ' ' + report.houseNumber + ', ' + report.city }}</v-card-title>
                         <v-card-actions>
-                            <v-btn variant="outlined">Bekijk Rapportage</v-btn>
+                            <v-btn @click="showReport(report)" variant="outlined">Bekijk Rapportage</v-btn>
                         </v-card-actions>
                     </v-card>
                 </v-col>
@@ -34,7 +34,17 @@
                     return this.$store.state.assignedReports
                 }
             }
+        },
+        methods:{
+        showReport(report){
+            this.$router.push({
+                name: 'assigned-report',
+                params:{
+                    id: report.id,
+                }
+            });
         }
+    }
     }
 </script>
 
