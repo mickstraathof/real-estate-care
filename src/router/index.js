@@ -6,6 +6,7 @@ import AssignedReports from "../views/AssignedReports";
 import CompletedReports from "../views/CompletedReports";
 import CompletedReport from "../views/CompletedReport";
 import AssignedReport from "../views/AssignedReport";
+import InfoView from "../views/InfoView";
 
 const routes = [
     //declaring routes
@@ -33,6 +34,11 @@ const routes = [
         path: '/completed-reports/:id',
         name: 'completed-report',
         component: CompletedReport,
+    },
+    {
+        path: '/info',
+        name: 'info',
+        component: InfoView,
     }
 ]
 
