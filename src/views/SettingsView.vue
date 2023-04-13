@@ -14,6 +14,7 @@
                                     <v-form fast-fail @submit.prevent>
                                         <v-text-field
                                             label="Naam"
+                                            v-model="name"
                                         ></v-text-field>
                                         <v-file-input
                                             name="avatar"
@@ -26,18 +27,22 @@
                                             label="Verander Wachtwoord"
                                             type="input"
                                             hint="Vul een nieuw wachtwoord in"
+                                            v-model="password"
                                         ></v-text-field>
                                         <v-switch
                                             label="Gebruike donkere modus"
                                             color="info"
+                                            v-model="darkMode"
                                         ></v-switch>
                                         <v-switch
                                             label="Meldingen tonen"
                                             color="info"
+                                            v-model="allowNotifications"
                                         ></v-switch>
                                         <v-switch
                                             label="Geluid toestaan"
                                             color="info"
+                                            v-model="allowSound"
                                         ></v-switch>
                                     </v-form>
                                 </v-sheet>
@@ -60,6 +65,48 @@ export default{
     components: {
         RightBubble,
         LeftBubble
+    },
+    computed:{
+        name: {
+            get(){
+                return this.$store.state.name
+            },
+            set(newValue){
+                this.$store.dispatch('setName', newValue)
+            }
+        },
+        password: {
+            get(){
+                return this.$store.state.password
+            },
+            set(newValue){
+                this.$store.dispatch('setPassword', newValue)
+            }
+        },
+        darkMode: {
+            get(){
+                return this.$store.state.darkMode
+            },
+            set(newValue){
+                this.$store.dispatch('setDarkMode', newValue)
+            }
+        },
+        allowNotifications: {
+            get(){
+                return this.$store.state.allowNotifications
+            },
+            set(newValue){
+                this.$store.dispatch('setAllowNotifications', newValue)
+            }
+        },
+        allowSound: {
+            get(){
+                return this.$store.state.allowSound
+            },
+            set(newValue){
+                this.$store.dispatch('setAllowSound', newValue)
+            }
+        }
     }
 }
 </script>
