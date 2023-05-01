@@ -13,7 +13,7 @@
                             {{ doc.description }}
                         </v-card-text>
                         <v-card-actions>
-                            <v-btn href="{{ doc.reference }}" target="_blank" >Open PDF-bestand</v-btn>
+                            <v-btn :href="'./' + doc.reference" target="_blank" >Open PDF-bestand</v-btn>
                         </v-card-actions>
                     </v-card>
                 </v-col>
