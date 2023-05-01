@@ -193,9 +193,19 @@
     ],
     "infoDocs": [
         {
-            "name": "Testprocedure Technische Installaties",
-            "description": "Beschrijving van testprocedures voor de technische installaties van een bewoner",
-            "reference": "testprocedure-technische-installaties.pdf"
+            "name": "Schade opnemen",
+            "description": "Beschrijving en specificaties voor het opnemen en documenteren van schade in de woning",
+            "reference": "richtlijnen-schade-opnemen.pdf"
+        },
+        {
+            "name": "Achterstallig onderhoud opnemen",
+            "description": "Beschrijving en specificaties voor het opnemen en documenteren van achterstallig onderhoud in de woning",
+            "reference": "richtlijnen-achterstallig-onderhoud-opnemen.pdf"
+        },
+        {
+            "name": "Technische installaties inspecteren",
+            "description": "Beschrijving en specificaties voor het opnemen en documenteren van technische installaties in de woning",
+            "reference": "richtlijnen-technische-installaties-opnemen.pdf"
         },
         {
             "name": "Testprocedure Technische Installaties",
@@ -203,19 +213,9 @@
             "reference": "testprocedure-technische-installaties.pdf"
         },
         {
-            "name": "Testprocedure Technische Installaties",
-            "description": "Beschrijving van testprocedures voor de technische installaties van een bewoner",
-            "reference": "testprocedure-technische-installaties.pdf"
-        },
-        {
-            "name": "Testprocedure Technische Installaties",
-            "description": "Beschrijving van testprocedures voor de technische installaties van een bewoner",
-            "reference": "testprocedure-technische-installaties.pdf"
-        },
-        {
-            "name": "Testprocedure Technische Installaties",
-            "description": "Beschrijving van testprocedures voor de technische installaties van een bewoner",
-            "reference": "testprocedure-technische-installaties.pdf"
+            "name": "Modificaties inventariseren",
+            "description": "Beschrijving en specificaties voor het opnemen en documenteren van modificaties in de woning",
+            "reference": "richtlijnen-modificaties-inventariseren.pdf"
         }
     ]
 }
