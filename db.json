@@ -195,27 +195,27 @@
         {
             "name": "Testprocedure Technische Installaties",
             "description": "Beschrijving van testprocedures voor de technische installaties van een bewoner",
-            "href": "@/assets/documents/testprocedure-technische-installaties.pdf"
+            "reference": "testprocedure-technische-installaties.pdf"
         },
         {
             "name": "Testprocedure Technische Installaties",
             "description": "Beschrijving van testprocedures voor de technische installaties van een bewoner",
-            "href": "@/assets/documents/testprocedure-technische-installaties.pdf"
+            "reference": "testprocedure-technische-installaties.pdf"
         },
         {
             "name": "Testprocedure Technische Installaties",
             "description": "Beschrijving van testprocedures voor de technische installaties van een bewoner",
-            "href": "@/assets/documents/testprocedure-technische-installaties.pdf"
+            "reference": "testprocedure-technische-installaties.pdf"
         },
         {
             "name": "Testprocedure Technische Installaties",
             "description": "Beschrijving van testprocedures voor de technische installaties van een bewoner",
-            "href": "@/assets/documents/testprocedure-technische-installaties.pdf"
+            "reference": "testprocedure-technische-installaties.pdf"
         },
         {
             "name": "Testprocedure Technische Installaties",
             "description": "Beschrijving van testprocedures voor de technische installaties van een bewoner",
-            "href": "@/assets/documents/testprocedure-technische-installaties.pdf"
+            "reference": "testprocedure-technische-installaties.pdf"
         }
     ]
 }
